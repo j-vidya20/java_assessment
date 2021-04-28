@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+ function text_truncate(string, len, last) {
+    if (len == null) {
+      len = 100;
+    }
+    if (last == null) {
+      last = '...';
+    }
+    if (string.length> len) {
+      return string.substring(0, len - last.length) + last;
+    } else {
+      return string;
+    }
+  };
+  document.writeln(text_truncate('We are doing JS string exercises.'))
+document.writeln(text_truncate('We are doing JS string exercises.',19))
+document.writeln(text_truncate('We are doing JS string exercises.',15,'!!'))
+</script>
+</pre>
+</body>
+</html>

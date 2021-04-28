@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function compare_dates(d1,d2){
+     if (d1<d2){
+         return ("Date2 > Date1");}
+         
+
+   else if (d1>d2){
+   
+      return ("Date1 > Date2");}
+   else {
+    return ("Date1 = Date2"); }
+         
+  }
+
+document.writeln(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:00')));
+//document.write("\n");
+document.writeln(compare_dates(new Date('11/14/2013 00:01'), new Date('11/14/2013 00:00')));
+document.writeln(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:01')));
+</script>
+</pre>
+</body>
+</html>
