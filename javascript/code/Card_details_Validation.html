@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>Contact information</h3>
+<p>Try to submit the form.</p>
+
+<div class="container">
+  <form  name=details  method="post" onsubmit="myFunction()" >
+  <section>
+  <input type="radio" id="Mrs" name="Mrs" value="Mrs">
+<label for="Mrs">Mrs</label>
+<input type="radio" id="Ms" name="Ms" value="Ms">
+<label for="Ms">Ms</label>
+<input type="radio" id="Miss" name="Miss" value="Miss">
+<label for="Miss">Miss</label><br>
+<p>
+    <label>Name:</label>
+    
+    <input type="text" id="name"  maxlength="30" name="fname"  pattern="[A-Za-z ]{1,}" title="Please enter the your full name" required><br></p>
+    <p>
+    <label for="email">email:</label>
+    <input type="email" id="usrname" name="usrname" title="email id required" required><br></p>
+<p>
+    <label for="psw">Password:</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></p>
+    
+    
+    </section>
+    <section>
+    <h2>Payment information</h2>
+    <p>
+      <label for="card">
+        <span>Card type:</span>
+      </label>
+      <select id="card" name="usercard">
+        <option value="Visa">Visa</option>
+        <option value="mc">Mastercard</option>
+        <option value="amex">American Express</option>
+      </select>
+    </p>
+    <p>
+    <label for="number">Card number:</label>
+    <input type="tel" id="number" name="cardnumber" title="Please enter card number correctly" required><br></p>
+      
+   
+    <p>
+      <label for="date">Expiration date:</label>
+      
+        <strong><abbr title="required">*</abbr></strong>
+        <input type="date" id="date" name="dtae" hint="dd-mm-yyyy" title="date required" required><br></p>
+      
+      
+     <input type="submit" value="Submit" >
+  </section>
+  </form>
+  
+</div>
+
+		
+<script>
+
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 6) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+function myFunction() {
+	var x=document.details.fname.value;
+	var y=document.details.cardnumber.value;
+	var z=document.details.usercard.value;
+	
+	
+
+	  //alert("The form was submitted" +x+"hey");
+	  
+	  document.write("<h4>Validation successfull</h4>")
+	  document.write("hi!!.. "+x+" Your validation is completed");
+	  document.write("<h4>Please check the card details below</h4>");
+	  document.write("Your Card Number is	:"+y+" and Card Type is :"+z+".");
+	  
+	  
+
+	  
+	  
+	}
+
+</script>
+
+</body>
+</html>
