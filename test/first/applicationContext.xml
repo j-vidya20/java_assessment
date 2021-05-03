@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+<bean id="e" class="com.Cohorts">  
+
+<constructor-arg value="1" type="int"></constructor-arg> 
+<constructor-arg value="sree vidya" type="String"></constructor-arg> 
+<constructor-arg value="vidyajulakanti@gmail.com" type="String"></constructor-arg>  
+<constructor-arg value="6304338969" type="Long"></constructor-arg> 
+</bean> 
+<bean id="D" class="com.DXC">  
+
+<constructor-arg value="2" type="int"></constructor-arg> 
+<constructor-arg value="sai sree vidya" type="String"></constructor-arg> 
+<constructor-arg value="vidyaj@gmail.com" type="String"></constructor-arg>  
+<constructor-arg value="8519895944" type="Long"></constructor-arg> 
+ 
+  </bean>
+</beans>
