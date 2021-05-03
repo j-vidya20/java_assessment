@@ -2,10 +2,23 @@ package com;
 
 import org.springframework.stereotype.Component;
 
-@Component
+package com;
+
 public class DXC {
-String empid;
-String emptype;
-int year;
-Cohorts cohort;
+	private int EmployeeId,year;
+	private String EmploymentType;
+	Cohorts cohort;
+	public DXC(int employeeId, int year, String employmentType, Cohorts cohort) {
+		super();
+		EmployeeId = employeeId;
+		this.year = year;
+		EmploymentType = employmentType;
+		this.cohort = cohort;
+	}
+	public void display() {
+		System.out.println("EmployeeId Year EmployeeType");
+		 System.out.println(EmployeeId+"     "+year+"	"+EmploymentType);  
+		 System.out.println(cohort.toString());  
+	}
+
 }
