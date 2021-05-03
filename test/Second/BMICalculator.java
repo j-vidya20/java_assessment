@@ -21,6 +21,12 @@ double calculateBMI(double patientWeight, double patientHeight) {
 		//System.out.println(pa.getPatientid());
 		
 	}
+else if(bmi<18.5)
+	{
+		
+		System.out.println(" patient is Under weight  i.e.,  ");
+		System.out.println(bmi);
+	}
 	else {
 		System.out.println(bmi);
 		System.out.println("Patients BMI was normal");
